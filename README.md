@@ -50,12 +50,11 @@ Each step's **delay** is the pause before it runs. The total length is shown und
 
 | File | Responsibility |
 | --- | --- |
-| `main.py` | Launcher. Restarts with the project's `.venv` automatically, turns on real-pixel mouse positions, shows a small spinning ring while the window is built, then starts the window. `--check` and `--smoke-test` verify the install. |
+| `main.py` | Launcher. Restarts with the project's `.venv` automatically, turns on real-pixel mouse positions, starts the window. `--check` and `--smoke-test` verify the install. |
 | `src/application.py` | App state: recording, playback, hotkeys, files, and every edit command. |
 | `src/main_window.py` | Builds the window (controls on the left, step editor on the right), the edit dialogs, colours and fonts. |
 | `src/macro_engine.py` | The engine: the step model, editing with undo/redo, recording and replaying through pynput, and saving `.mimic` files. |
 | `assets/icon.png` / `assets/icon.ico` | The window icon and the Windows icon. |
-| `assets/loader.png` | Still picture of the loading spinner, shown by `Mimic.exe` while it unpacks (build with `--splash assets\loader.png`). |
 | `assets/icons/` | Button icons from [Lucide](https://lucide.dev) (ISC license), drawn a little bolder. |
 | `requirements.txt` | Lists the Python packages required to run the project. |
 | `.gitignore` | Keeps the virtual environment and Python cache files out of git. |
